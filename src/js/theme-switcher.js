@@ -9,11 +9,9 @@ export default function switchTheme({ Theme }) {
 
     document.body.classList.add(localStorage.getItem('theme'));
     
-    
         function toggerOfTheme(){
             document.body.classList.toggle(Theme.DARK,(themeSwitcher.checked));
             document.body.classList.toggle(Theme.LIGHT, (!themeSwitcher.checked));
-            localStorage.setItem('theme', document.body.classList);
-            
+            localStorage.setItem('theme', document.body.classList);    
 } 
 };
