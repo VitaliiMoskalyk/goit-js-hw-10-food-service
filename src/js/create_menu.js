@@ -1,18 +1,17 @@
 import menuTemplate  from '../templates/template_menu.hbs';
+import menu from '../menu_data/menu.json';
+import menuList from './selectors';
 
 
-export default function create(menu) {
-const menuList = document.querySelector('ul.js-menu');
-    const MenuMarkup=creatingMenuMarkup(menu)
+const MenuMarkup=creatingMenuMarkup(menu)
     menuList.insertAdjacentHTML('beforeend', MenuMarkup);
 
 function creatingMenuMarkup(menu) {
     return menu.map(menuTemplate).join('');
 };
 
-}
 
-        
+creatingMenuMarkup(menu);
 
  
 
